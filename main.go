@@ -1,10 +1,12 @@
 package main
 
-import "github.com/pdelewski/instrgen_test_module/module1"
-import "github.com/pdelewski/instrgen_testapp/component"
+import (
+	"github.com/pdelewski/instrgen_test_module/module1"
+	"github.com/pdelewski/instrgen_testapp/component"
+)
 
 type Factory interface {
-  component.Factory
+	component.Factory
 }
 
 type basic struct {
@@ -13,10 +15,18 @@ type basic struct {
 func (b basic) Type() {
 }
 
+func test1() {
+
+	b := basic{}
+	b.Type()
+}
+
 func main() {
-  module1.Foo()
-  component.Component()
-  var b Factory
-  b = basic{}
-  b.Type()
+
+	module1.Foo()
+	component.Component()
+	var b Factory
+	b = basic{}
+	b.Type()
+	test1()
 }

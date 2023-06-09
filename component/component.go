@@ -1,11 +1,14 @@
 package component
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Factory interface {
-  Type()
+	Type()
 }
 
 func Component() {
-  fmt.Println("Component")
+
+	fmt.Println("Component")
 }
