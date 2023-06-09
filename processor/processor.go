@@ -5,13 +5,13 @@ import (
 )
 
 type Factory interface {
-
+  component.Factory
 }
 
 type factory struct {
 }
 
-func Type() {
+func(f factory) Type() {
   fmt.Println("processor.Type")
 }
 

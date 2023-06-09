@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/pdelewski/instrgen_test_module/module1"
 	"github.com/pdelewski/instrgen_testapp/component"
-	"processor"
+	"github.com/pdelewski/instrgen_testapp/processor"
 )
 
 //type Factory interface {
@@ -34,4 +34,5 @@ func main() {
 //	b = basic{}
 //	b.Type()
 	test1()
+        processor.NewProcessor()
 }
