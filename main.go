@@ -7,32 +7,39 @@ import (
 )
 
 type Factory interface {
-	component.Factory
+  component.Factory2
 }
 
-type basic struct {
+type factory2 struct {
 }
 
-func (b basic) Type() {
+type factory struct {
 }
 
-func (b basic) Foo() {
+func (f factory2) Type2() {
+
+}
+
+func (f factory) Type() {
 }
 
 func test1() {
-
-	b := basic{}
-	b.Type()
-	b.Foo()
+  var f Factory
+  f = factory2{}
+  f.Type2()
 }
+
+
 
 func main() {
 
 	module1.Foo()
 	component.Component()
-	var b Factory
-	b = basic{}
-	b.Type()
+
+	var f component.Factory
+	f = factory{}
+	f.Type()
 	test1()
+
 	processor.NewProcessor()
 }
