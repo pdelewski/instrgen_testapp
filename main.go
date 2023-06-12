@@ -6,9 +6,9 @@ import (
 	"github.com/pdelewski/instrgen_testapp/processor"
 )
 
-//type Factory interface {
-//	component.Factory
-//}
+type Factory interface {
+	component.Factory
+}
 
 type basic struct {
 }
@@ -30,9 +30,9 @@ func main() {
 
 	module1.Foo()
 	component.Component()
-//	var b Factory
-//	b = basic{}
-//	b.Type()
+	var b Factory
+	b = basic{}
+	b.Type()
 	test1()
-        processor.NewProcessor()
+	processor.NewProcessor()
 }
