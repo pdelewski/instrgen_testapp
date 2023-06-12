@@ -6,7 +6,7 @@ import (
 	"github.com/pdelewski/instrgen_testapp/processor"
 )
 
-type Factory interface {
+type Factory2 interface {
   component.Factory2
 }
 
@@ -24,9 +24,9 @@ func (f factory) Type() {
 }
 
 func test1() {
-  var f Factory
-  f = factory2{}
-  f.Type2()
+  var f2 Factory2
+  f2 = factory2{}
+  f2.Type2()
 }
 
 
